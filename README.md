@@ -1,4 +1,4 @@
-# michellundell/67 C++
+# michellundell/7a C++
 
 ## Agenda
 1. C++ class constructor
@@ -16,6 +16,7 @@
 
 ## 1. C++ class constructor
 A c++ class constructor is public and returns nothing!
+
 ```
 #include <iostream>
 using namespace std;
@@ -30,9 +31,11 @@ int main(int argc, char **argv)
         BaseClass bc;
         return 0;
 }
+```
 
 ## 2. C++ class destructor
 
+A class destructor is defined by having a ~ infront of it and return nothing.
 ```
 #include <iostream>
 using namespace std;
@@ -52,25 +55,30 @@ int main(int argc, char **argv)
 
 ## 3. C++ inheritance
 
+Classes can inherit from other classes.
+
 ```
 #include <iostream>
 using namespace std;
 
 class BaseClass {
-	char data[20];
-	public:
-		BaseClass() { cout << "BaseClass created" << endl; strcpy(data,"initiated"); }
+        char data[20];
+        public:
+                BaseClass() { cout << "BaseClass created" << endl; strcpy(data,"initiated"); }
+                const char *getData() { return(this->data); }
+                void doit() { cout << "BaseClass::doit()" << endl; }
 };
 
 class SubClass: public BaseClass {
-	public:
-		SubClass() { cout << "SubClass created, BaseClass::data=" << BaseClass::data << endl; }
+        public:
+                SubClass() { cout << "SubClass created, BaseClass::data=" << this->getData() << endl; }
 };
 
 int main(int argc,char **argv)
-{ 
-	SubClass sc;
-	return 0;
+{
+        SubClass sc;
+        sc.doit();
+        return 0;
 }
 ```
 
