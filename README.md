@@ -428,7 +428,7 @@ int main(int argc, char **argv)
 
 ## 12. Todays assignments
 
-1. Compile the examples above and look at the code and output. Try to remember these C++ features by creating some other 
+1. Compile the examples above and look at the code and output. Try to remember these C++ features by **writing** some other 
 examples of each feature **without looking/copy-paste!**
 
 2. If you are finished with the ticket program in C, start making a C++ version of it!
