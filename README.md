@@ -253,11 +253,12 @@ template <class T> T max(T a, T b)
 	return a > b ? a : b ;
 }
 
-void main()
+int main(int argc,char **argv)
 {
 	cout << "max(10, 15) = " << max(10, 15) << endl ;
 	cout << "max('k', 's') = " << max('k', 's') << endl ;
 	cout << "max(10.1, 15.2) = " << max(10.1, 15.2) << endl ;
+	return 0;
 }
 ```
 When the compiler sees an instantiation of the function template, for example: the call max(10, 15) in function main, the compiler generates a function max(int, int). Similarly the compiler generates definitions for max(char, char) and max(float, float) in this case.
